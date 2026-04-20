@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía de usuario - Tandas App</title>
+  <meta name="description" content="Conoce cómo usar Tandas App, organizar tus tandas y llevar tus pagos con una experiencia simple, segura y confiable." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1d7ef5 0%, #2ea8ff 40%, #44d98c 100%);
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    .page {
+      min-height: 100vh;
+      padding: 24px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background: #e8f3ff;
+      color: #1463d8;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.15;
+      color: #15304f;
+      margin-bottom: 14px;
+    }
+    .lead {
+      font-size: 1.08rem;
+      color: #4b5d73;
+      margin-bottom: 20px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, #1976f3, #25a3ff);
+      color: white;
+      box-shadow: 0 10px 24px rgba(25,118,243,0.28);
+    }
+    .btn-secondary {
+      background: white;
+      color: #165ec9;
+      border: 1px solid #cfe1ff;
+    }
+    .hero-card {
+      background: linear-gradient(180deg, #eff7ff, #f8fffd);
+      border: 1px solid #d8e9ff;
+      border-radius: 22px;
+      padding: 22px;
+    }
+    .hero-card h3 {
+      color: #15304f;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    .hero-card ul {
+      padding-left: 18px;
+      color: #45607c;
+    }
+    .hero-card li { margin-bottom: 8px; }
+    .section {
+      background: rgba(255,255,255,0.96);
+      border-radius: 24px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .section h2 {
+      color: #17365e;
+      margin-bottom: 14px;
+      font-size: 1.5rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .card {
+      background: linear-gradient(180deg, #f7fbff, #f9fffb);
+      border: 1px solid #deedff;
+      border-radius: 18px;
+      padding: 18px;
+    }
+    .card h3 {
+      margin-bottom: 8px;
+      color: #1c4576;
+      font-size: 1.02rem;
+    }
+    .card p, .section p, .section li {
+      color: #51657d;
+    }
+    .steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: #f8fbff;
+      border: 1px solid #ddeaff;
+      padding: 14px;
+      border-radius: 16px;
+    }
+    .step-number {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1b7ff4, #3ad3c6);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+    .highlight {
+      background: linear-gradient(135deg, #ebfff5, #f2f8ff);
+      border: 1px solid #cfeedd;
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 16px;
+      color: #2e5d4f;
+    }
+    .footer-cta {
+      text-align: center;
+      background: rgba(255,255,255,0.97);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .footer-cta h2 {
+      margin-bottom: 10px;
+      color: #14355f;
+    }
+    .footer-cta p {
+      color: #587089;
+      margin-bottom: 18px;
+    }
+    .muted {
+      font-size: 0.92rem;
+      color: #6d8195;
+      margin-top: 14px;
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .cards { grid-template-columns: 1fr; }
+      h1 { font-size: 2rem; }
+    }
+    @media (max-width: 600px) {
+      .page { padding: 14px; }
+      .hero, .section, .footer-cta { padding: 20px; }
+      .cta-row { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <section class="hero">
+        <span class="badge">Guía oficial de uso</span>
+        <div class="hero-grid">
+          <div>
+            <h1>Organiza tus tandas con claridad, confianza y menos estrés</h1>
+            <p class="lead">Tandas App te ayuda a llevar control de pagos, participantes y recordatorios desde un solo lugar. Es simple de usar, visual y pensada para que tengas más orden y tranquilidad.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="downloads/tandas_app_1_0_1.apk" download>📥 Instalar ahora</a>
+              <a class="btn btn-secondary" href="index.html">⬅ Volver a la página principal</a>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <h3>¿Por qué usar Tandas App?</h3>
+            <ul>
+              <li>Control claro de tus tandas y pagos</li>
+              <li>Recordatorios locales en tu dispositivo</li>
+              <li>Respaldo seguro en formato JSON</li>
+              <li>Soporte y guía siempre disponibles</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Lo que puedes hacer desde la app</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Crear tandas fácilmente</h3>
+            <p>Registra el nombre, monto, frecuencia y participantes en pocos pasos.</p>
+          </div>
+          <div class="card">
+            <h3>Dar seguimiento a pagos</h3>
+            <p>Marca pagos realizados y consulta los pendientes de forma ordenada.</p>
+          </div>
+          <div class="card">
+            <h3>Respaldar tu información</h3>
+            <p>Exporta e importa tus datos para mantenerlos protegidos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Empieza en minutos</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div>
+              <strong>Instala la app</strong>
+              <p>Descarga el APK desde esta página e instala Tandas App en tu dispositivo Android.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div>
+              <strong>Crea tu primera tanda</strong>
+              <p>Agrega el nombre, monto y periodicidad. Después registra a tus participantes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div>
+              <strong>Activa recordatorios y respaldo</strong>
+              <p>Desde Configuración puedes habilitar recordatorios locales y el respaldo semanal.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div>
+              <strong>Usa WhatsApp de forma segura</strong>
+              <p>La app abre WhatsApp para que revises el mensaje antes de enviarlo manualmente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight">
+          Consejo: si manejas varias tandas, realiza un respaldo con frecuencia para mantener tu información segura.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Preguntas rápidas</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>¿Funciona sin internet?</h3>
+            <p>Sí. La mayor parte del control de tandas y pagos funciona localmente en tu dispositivo.</p>
+          </div>
+          <div class="card">
+            <h3>¿Los mensajes se envían solos?</h3>
+            <p>No. Por seguridad, tú confirmas el envío en WhatsApp.</p>
+          </div>
+          <div class="card">
+            <h3>¿Puedo recuperar mis datos?</h3>
+            <p>Sí. Usa exportar e importar respaldos en formato JSON.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-cta">
+        <h2>Haz que tus tandas se sientan más simples</h2>
+        <p>Instala Tandas App y lleva un mejor control desde hoy.</p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="downloads/tandas_app_1_0_1.apk" download>🚀 Descargar Tandas App</a>
+        </div>
+        <p class="muted">Última actualización: 19 de abril de 2026</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

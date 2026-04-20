@@ -83,8 +83,15 @@ p {
   color: #5a6c7d;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: 400;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  align-items: center;
 }
 
 .btn {
@@ -126,6 +133,17 @@ p {
 
 .btn:active {
   transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #2c5bdb;
+  border: 2px solid rgba(44, 91, 219, 0.25);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 8px 25px rgba(44, 91, 219, 0.18);
 }
 
 .version-info {
