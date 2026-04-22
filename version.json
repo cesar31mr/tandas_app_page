@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "releaseNotes": "Se corrige configuración, exportación de datos y mejoras en la interfaz de usuario.",
+  "version": "1.1.0",
+  "releaseNotes": "- Se corrigieron errores menores en la interfaz de usuario.\n- Se mejoró el rendimiento al cargar los datos de las tandas.\n- Se actualizó la política de privacidad y los términos de servicio.\n- Se agregó soporte para nuevos dispositivos y versiones de Android.",
   "downloadUrl": "https://cesar31mr.github.io/tandas_app_page/downloads/tandas_app.apk",
-  "releaseDate": "2026-04-19"
+  "releaseDate": "2026-04-21"
 }
