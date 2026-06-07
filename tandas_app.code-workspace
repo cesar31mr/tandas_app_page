@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "tandas_app_page",
+			"path": "."
+		},
+		{
+			"name": "tandas_app",
+			"path": "../tandas_app"
+		}
+	],
+	"settings": {}
+}

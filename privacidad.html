@@ -3,61 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad – Tandas App</title>
+  <meta name="description" content="Términos y condiciones de uso de Tandas App. Condiciones, limitaciones de responsabilidad y política de privacidad." />
+  <title>Términos y condiciones – Tandas App</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #222; line-height: 1.7; }
-    h1 { color: #2e7d32; }
-    h2 { color: #388e3c; margin-top: 2em; }
-    a  { color: #2e7d32; }
-    footer { margin-top: 3em; font-size: 0.85em; color: #666; border-top: 1px solid #ddd; padding-top: 1em; }
+    :root {
+      --green: #2e7d32;
+      --green-light: #4caf50;
+      --green-pale: #e8f5e9;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #ddd;
+      --radius: 10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background: #fafafa;
+      line-height: 1.75;
+    }
+    header {
+      background: var(--green);
+      color: #fff;
+      padding: 40px 20px 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
+    header p  { font-size: 1rem; opacity: .88; max-width: 600px; margin: 0 auto 20px; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: .85rem;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: .93rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn-ghost { background:transparent; border:2px solid rgba(255,255,255,.7); color:#fff; }
+
+    .toc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .toc h3 { font-size: .95rem; margin-bottom: 10px; color: var(--green); }
+    .toc ol  { padding-left: 18px; }
+    .toc li  { margin-bottom: 4px; font-size: .9rem; }
+    .toc a   { color: var(--green); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    main { max-width: 780px; margin: 0 auto; padding: 32px 20px 60px; }
+
+    h2 {
+      font-size: 1.2rem;
+      color: var(--green);
+      border-left: 4px solid var(--green-light);
+      padding-left: 12px;
+      margin: 40px 0 14px;
+      scroll-margin-top: 20px;
+    }
+    p  { margin-bottom: 14px; color: var(--muted); }
+    ul { padding-left: 20px; color: var(--muted); margin-bottom: 14px; }
+    li { margin-bottom: 6px; }
+
+    .highlight {
+      background: var(--green-pale);
+      border-left: 4px solid var(--green-light);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: .92rem;
+      color: #2e7d32;
+    }
+    .warn {
+      background: #fff8e1;
+      border-left: 4px solid #ffc107;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-size: .92rem;
+      color: #5d4037;
+    }
+
+    .last-updated {
+      font-size: .82rem;
+      color: #999;
+      margin-bottom: 28px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 20px;
+      font-size: .82rem;
+      color: #999;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--green); text-decoration: none; }
   </style>
 </head>
 <body>
-  <h1>Política de Privacidad</h1>
-  <p><strong>Tandas App</strong> – Aplicación para gestión de tandas y ahorros grupales<br>
-  Última actualización: 21 de abril de 2026</p>
 
-  <h2>1. Información que recopilamos</h2>
-  <p>Tandas App es una aplicación de uso <strong>exclusivamente local</strong>. Todos los datos que ingresas (nombres de participantes, montos, fechas y pagos) se almacenan únicamente en el dispositivo del usuario mediante una base de datos local (Hive). <strong>No se envían datos a servidores externos ni a terceros.</strong></p>
+<header>
+  <div class="badge">Versión 1.1.0 · Última revisión: junio 2026</div>
+  <h1>📄 Términos y condiciones</h1>
+  <p>Lee con atención antes de usar Tandas App. Al instalar o usar la aplicación aceptas estas condiciones.</p>
+  <a href="https://cesar31mr.github.io/tandas_app_page/index.html" class="btn btn-ghost">← Volver al inicio</a>
+</header>
 
-  <h2>2. Datos de contacto (opcional)</h2>
-  <p>Si el usuario importa contactos del teléfono para autocompletar nombres o números de teléfono de participantes, dicha información se usa únicamente en ese momento y no se almacena más allá de lo que el propio usuario decida guardar en la tanda. La app solicita el permiso <code>READ_CONTACTS</code> exclusivamente para esta funcionalidad.</p>
+<main>
+  <p class="last-updated">Última actualización: 7 de junio de 2026</p>
 
-  <h2>3. Notificaciones locales</h2>
-  <p>La app puede programar notificaciones locales en el dispositivo para recordar fechas de pago. Estas notificaciones no requieren conexión a internet y no transmiten información fuera del dispositivo.</p>
+  <!-- ÍNDICE -->
+  <nav class="toc">
+    <h3>Contenido</h3>
+    <ol>
+      <li><a href="#aceptacion">Aceptación de los términos</a></li>
+      <li><a href="#descripcion">Descripción del servicio</a></li>
+      <li><a href="#uso-permitido">Uso permitido</a></li>
+      <li><a href="#responsabilidad">Limitación de responsabilidad</a></li>
+      <li><a href="#datos">Datos y privacidad</a></li>
+      <li><a href="#whatsapp">Integración con WhatsApp</a></li>
+      <li><a href="#pagos">Pagos y transacciones</a></li>
+      <li><a href="#propiedad">Propiedad intelectual</a></li>
+      <li><a href="#modificaciones">Cambios a los términos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
 
-  <h2>4. Permisos requeridos</h2>
+  <!-- 1 -->
+  <h2 id="aceptacion">1. Aceptación de los términos</h2>
+  <p>Al descargar, instalar o utilizar Tandas App ("la Aplicación"), el usuario ("tú" o "el Usuario") acepta quedar sujeto a los presentes Términos y Condiciones de Uso ("los Términos"). Si no estás de acuerdo con alguna de estas condiciones, no debes usar la Aplicación.</p>
+  <p>Estos Términos constituyen el acuerdo completo entre el Usuario y Technology Rasek ("nosotros", "el Desarrollador") con respecto al uso de la Aplicación.</p>
+
+  <!-- 2 -->
+  <h2 id="descripcion">2. Descripción del servicio</h2>
+  <p>Tandas App es una aplicación móvil para Android que permite a los usuarios organizar, gestionar y registrar tandas (sistemas informales de ahorro rotativo grupal). Sus funciones principales incluyen:</p>
   <ul>
-    <li><strong>Almacenamiento</strong> – para exportar o importar respaldos de datos.</li>
-    <li><strong>Cámara / Galería</strong> – para adjuntar fotos de comprobantes (opcional).</li>
-    <li><strong>Contactos</strong> – para importar nombres y teléfonos de participantes (opcional).</li>
-    <li><strong>Notificaciones</strong> – para recordatorios de pago.</li>
-    <li><strong>Internet</strong> – reservado para futuras funciones; actualmente no se usa para transmitir datos del usuario.</li>
+    <li>Creación y seguimiento de tandas con múltiples participantes.</li>
+    <li>Registro de pagos, adeudos y porcentaje de cumplimiento.</li>
+    <li>Generación de recordatorios y mensajes de WhatsApp.</li>
+    <li>Exportación e importación de datos en formato JSON.</li>
+    <li>Widget en pantalla de inicio con resumen de estadísticas.</li>
+    <li>Notificaciones locales para fechas de pago.</li>
+  </ul>
+  <div class="highlight">
+    ℹ️ La Aplicación es una herramienta de registro personal. No es una institución financiera, no gestiona fondos, no realiza transferencias ni ofrece rendimientos.
+  </div>
+
+  <!-- 3 -->
+  <h2 id="uso-permitido">3. Uso permitido</h2>
+  <p>El Usuario se compromete a utilizar la Aplicación únicamente para sus propósitos legítimos de organización personal. Queda expresamente prohibido:</p>
+  <ul>
+    <li>Usar la Aplicación para actividades ilícitas, fraudulentas o engañosas.</li>
+    <li>Intentar acceder, modificar o interferir con los datos de otros usuarios.</li>
+    <li>Descompilar, desensamblar o realizar ingeniería inversa del código fuente.</li>
+    <li>Distribuir, sublicenciar o revender la Aplicación o sus componentes.</li>
+    <li>Utilizar la Aplicación para actividades de lavado de dinero o financiamiento ilícito.</li>
   </ul>
 
-  <h2>5. Datos que NO recopilamos</h2>
+  <!-- 4 -->
+  <h2 id="responsabilidad">4. Limitación de responsabilidad</h2>
+  <div class="warn">
+    ⚠️ <strong>La Aplicación se proporciona "tal cual" sin garantías de ningún tipo.</strong> El Desarrollador no asume responsabilidad por pérdidas económicas, disputas entre participantes ni por el uso que el Usuario dé a la información registrada.
+  </div>
+  <p>El Desarrollador no se hace responsable por:</p>
   <ul>
-    <li>No recopilamos datos de uso, métricas ni telemetría.</li>
-    <li>No usamos servicios de análisis de terceros (Google Analytics, Firebase Analytics, etc.).</li>
-    <li>No mostramos anuncios ni compartimos datos con redes publicitarias.</li>
-    <li>No creamos cuentas de usuario ni almacenamos credenciales.</li>
+    <li>Pérdidas de datos derivadas de fallos del dispositivo, borrado accidental o falta de respaldo.</li>
+    <li>Disputas económicas o personales entre los participantes de una tanda.</li>
+    <li>Decisiones financieras basadas en la información mostrada por la Aplicación.</li>
+    <li>Interrupciones en el servicio causadas por actualizaciones del sistema operativo Android.</li>
+    <li>Pérdidas ocasionadas por el uso de funciones experimentales o en beta.</li>
+  </ul>
+  <p>El Usuario es el único responsable de la veracidad de los datos que ingresa y de mantener respaldos periódicos de su información.</p>
+
+  <!-- 5 -->
+  <h2 id="datos">5. Datos y privacidad</h2>
+  <p>Todos los datos ingresados en la Aplicación (nombres, montos, teléfonos, historial de pagos) se almacenan <strong>exclusivamente en el dispositivo del Usuario</strong>. El Desarrollador no recopila, transmite ni tiene acceso a esta información.</p>
+  <p>Para más detalles sobre el tratamiento de datos personales, consulta nuestra <a href="https://cesar31mr.github.io/tandas_app_page/privacidad.html">Política de Privacidad</a>.</p>
+  <ul>
+    <li><strong>Almacenamiento:</strong> local, en la base de datos del dispositivo (Hive/SQLite).</li>
+    <li><strong>Permisos solicitados:</strong> Contactos (solo para importar participantes), Notificaciones, Almacenamiento (para exportar respaldos).</li>
+    <li><strong>Sin telemetría:</strong> no se envían métricas de uso a servidores externos.</li>
+    <li><strong>Sin cuenta de usuario:</strong> no es necesario registrarse ni autenticarse.</li>
   </ul>
 
-  <h2>6. Respaldos</h2>
-  <p>La funcionalidad de respaldo exporta un archivo al almacenamiento del dispositivo. El usuario es responsable de la seguridad de dichos archivos. La app no sube respaldos a ningún servicio en la nube.</p>
+  <!-- 6 -->
+  <h2 id="whatsapp">6. Integración con WhatsApp</h2>
+  <p>La función de recordatorios por WhatsApp abre la aplicación WhatsApp instalada en el dispositivo con un mensaje predefinido. La Aplicación <strong>no envía mensajes de forma automática</strong>; el envío siempre requiere la acción explícita del Usuario dentro de WhatsApp.</p>
+  <p>WhatsApp es una marca registrada de WhatsApp LLC. Tandas App no está afiliada ni patrocinada por WhatsApp LLC ni Meta Platforms.</p>
+  <p>La integración con WhatsApp Business API es opcional y requiere que el Usuario cuente con sus propias credenciales (número de teléfono ID y token de acceso). El Desarrollador no recopila ni almacena estas credenciales en servidores externos.</p>
 
-  <h2>7. Menores de edad</h2>
-  <p>La app no está dirigida a menores de 13 años y no recopila conscientemente información de menores.</p>
+  <!-- 7 -->
+  <h2 id="pagos">7. Pagos y transacciones financieras</h2>
+  <p>Tandas App es una herramienta de <strong>registro y organización</strong>. No procesa pagos, no maneja cuentas bancarias ni realiza transferencias de dinero entre participantes. Todos los pagos reales se realizan fuera de la Aplicación, de forma directa entre las partes involucradas.</p>
+  <p>El Desarrollador no es responsable de los acuerdos económicos celebrados entre los participantes de una tanda ni de cualquier pérdida derivada de dichos acuerdos.</p>
 
-  <h2>8. Cambios a esta política</h2>
-  <p>Cualquier cambio a esta política de privacidad se publicará en esta misma página con una fecha de actualización. El uso continuado de la app después de publicar cambios implica la aceptación de los mismos.</p>
+  <!-- 8 -->
+  <h2 id="propiedad">8. Propiedad intelectual</h2>
+  <p>Tandas App, incluyendo su código fuente, diseño, logotipos, textos y demás elementos, es propiedad de Technology Rasek y está protegida por las leyes de propiedad intelectual aplicables.</p>
+  <p>Se concede al Usuario una licencia personal, no exclusiva, intransferible y revocable para instalar y usar la Aplicación en su dispositivo Android, únicamente para fines personales y no comerciales.</p>
 
-  <h2>9. Contacto</h2>
-  <p>Si tienes preguntas sobre esta política de privacidad, puedes contactarnos en:<br>
-  <a href="mailto:soporte@technologyrasek.com">soporte@technologyrasek.com</a></p>
+  <!-- 9 -->
+  <h2 id="modificaciones">9. Modificaciones a los términos</h2>
+  <p>El Desarrollador se reserva el derecho de modificar estos Términos en cualquier momento. Los cambios entrarán en vigor al publicarse en esta página. Se notificará al Usuario dentro de la Aplicación cuando se realicen cambios materiales.</p>
+  <p>El uso continuado de la Aplicación después de la publicación de cambios implica la aceptación de los nuevos Términos.</p>
 
-  <footer>
-    &copy; 2026 Tandas App – <a href="https://cesar31mr.github.io/tandas_app_page/">Inicio</a>
-  </footer>
+  <!-- 10 -->
+  <h2 id="contacto">10. Contacto</h2>
+  <p>Si tienes dudas, comentarios o solicitudes relacionadas con estos Términos, escríbenos a:</p>
+  <ul>
+    <li>Correo electrónico: <a href="mailto:soporte@technologyrasek.com">soporte@technologyrasek.com</a></li>
+    <li>Sitio web: <a href="https://cesar31mr.github.io/tandas_app_page/">cesar31mr.github.io/tandas_app_page</a></li>
+  </ul>
+
+  <div class="highlight">
+    ✅ Al usar Tandas App confirmas haber leído, entendido y aceptado estos Términos y nuestra <a href="https://cesar31mr.github.io/tandas_app_page/privacidad.html">Política de Privacidad</a>.
+  </div>
+
+</main>
+
+<footer>
+  <p>Última actualización: junio de 2026 &nbsp;·&nbsp;
+  <a href="https://cesar31mr.github.io/tandas_app_page/privacidad.html">Política de Privacidad</a> &nbsp;·&nbsp;
+  <a href="https://cesar31mr.github.io/tandas_app_page/guia-usuario.html">Guía de usuario</a> &nbsp;·&nbsp;
+  <a href="https://cesar31mr.github.io/tandas_app_page/index.html">Inicio</a> &nbsp;·&nbsp;
+  © 2026 Technology Rasek</p>
+</footer>
+
 </body>
 </html>
